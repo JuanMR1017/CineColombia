@@ -1,138 +1,200 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Punto de Venta - Cine Colombia</title>
 
-    <link rel="stylesheet" href="../css/dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script src="../Scripts/jquery-3.7.0.min.js"></script>
     <script src="../Scrips_From/dashboard.js"></script>
 
 </head>
+
 <body>
 
     <div class="dashboard-layout">
 
         <aside class="sidebar">
+
             <div class="sidebar-brand">
-                <div class="brand-logo">CC</div>
+
+                <div class="brand-logo">
+                    CC
+                </div>
+
                 <div class="brand-info">
                     <h1>Cine Colombia</h1>
                     <small>Gestión de Boletería</small>
                 </div>
+
             </div>
+
 
             <nav class="sidebar-nav">
+
                 <ul>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" data-target="cartelera">
-                            <i class="fa-solid fa-layer-group"></i> <span>Cartelera</span>
-                        </a>
+
+                        <button class="nav-link active" data-target="inicio">
+
+                            <i class="fa-solid fa-house"></i>
+                            <span>Inicio</span>
+
+                        </button>
+
                     </li>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="funciones">
-                            <i class="fa-solid fa-calendar-check"></i> <span>Funciones</span>
-                        </a>
+
+                        <button class="nav-link" data-target="cartelera">
+
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Cartelera</span>
+
+                        </button>
+
                     </li>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="ventas">
-                            <i class="fa-solid fa-ticket-simple"></i> <span>Nueva Venta</span>
-                        </a>
+
+                        <button class="nav-link" data-target="funciones">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Funciones</span>
+
+                        </button>
+
                     </li>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="clientes">
-                            <i class="fa-solid fa-user-tag"></i> <span>Clientes</span>
-                        </a>
+
+                        <button class="nav-link" data-target="ventas">
+
+                            <i class="fa-solid fa-ticket-simple"></i>
+                            <span>Nueva Venta</span>
+
+                        </button>
+
                     </li>
+
+                    <li class="nav-item">
+
+                        <button class="nav-link" data-target="clientes">
+
+                            <i class="fa-solid fa-user-tag"></i>
+                            <span>Clientes</span>
+
+                        </button>
+
+                    </li>
+
                     <li class="nav-item manager-only">
-                        <a href="#" class="nav-link" data-target="reportes">
-                            <i class="fa-solid fa-chart-pie"></i> <span>Reportes</span>
-                        </a>
+
+                        <button class="nav-link" data-target="reportes">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Reportes</span>
+
+                        </button>
+
                     </li>
+
                     <li class="nav-item admin-only">
-                        <a href="#" class="nav-link" data-target="configuracion">
-                            <i class="fa-solid fa-sliders"></i> <span>Configuración</span>
-                        </a>
+
+                        <button class="nav-link" data-target="configuracion">
+
+                            <i class="fa-solid fa-sliders"></i>
+                            <span>Configuración</span>
+
+                        </button>
+
                     </li>
+
                 </ul>
+
             </nav>
 
+
             <div class="sidebar-footer">
+
                 <button id="btnExit" class="btn-logout">
-                    <i class="fa-solid fa-power-off"></i> <span>Cerrar Sesión</span>
+
+                    <i class="fa-solid fa-power-off"></i>
+                    <span>Cerrar Sesión</span>
+
                 </button>
+
             </div>
+
         </aside>
+
 
         <div class="work-container">
 
             <header class="top-navbar">
+
                 <div class="navbar-left">
-                    <h2 id="view-title">Cartelera Actual</h2>
+
+                    <h2 id="view-title">
+                        Inicio
+                    </h2>
+
                 </div>
+
                 <div class="navbar-right">
+
                     <div class="live-clock">
+
                         <i class="fa-regular fa-calendar-days"></i>
-                        <span id="txtLiveDate">Carg ando fecha del servidor...</span>
+
+                        <span id="txtLiveDate">
+                            Cargando fecha...
+                        </span>
+
                     </div>
+
                     <div class="employee-badge">
-                        <div class="avatar"><i class="fa-solid fa-user-gear"></i></div>
-                        <div class="employee-details">
-                            <span id="lblSessionUser" class="name">Santiago Suárez</span>
-                            <span id="lblSessionRole" class="role">Cajero</span>
+
+                        <div class="avatar">
+
+                            <i class="fa-solid fa-user-gear"></i>
+
                         </div>
+
+                        <div class="employee-details">
+
+                            <span id="lblSessionUser" class="name">
+                                Santiago Suárez
+                            </span>
+
+                            <span id="lblSessionRole" class="role">
+                                Cajero
+                            </span>
+
+                        </div>
+
                     </div>
+
                 </div>
+
             </header>
 
-            <main class="main-workspace" id="dynamic-content">
-
-                <section class="data-section">
-                    <div class="section-header">
-                        <h3>Funciones Próximas (Tabla: FUNCION)</h3>
-                        <p>Lista de proyecciones programadas pendientes por iniciar para el día de hoy.</p>
-                    </div>
-
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Película (nombre_oferta)</th>
-                                    <th>Sala (nombre_sala)</th>
-                                    <th>Formato / Idioma</th>
-                                    <th>Hora Inicio</th>
-                                    <th>Precio Base</th>
-                                    <th>Acción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="font-bold">Deadpool 3</td>
-                                    <td>Sala 1 (General)</td>
-                                    <td><span class="badge 3d">3D</span> <span class="badge lang">Doblada</span></td>
-                                    <td>12:00 PM</td>
-                                    <td>$ 15,000.00</td>
-                                    <td><button class="btn-table-action"><i class="fa-solid fa-cart-shopping"></i> Ver Sillas</button></td>
-                                </tr>
-                                <tr>
-                                    <td class="font-bold">Furiosa: A Mad Max Saga</td>
-                                    <td>Sala 2 (IMAX)</td>
-                                    <td><span class="badge imax">IMAX</span> <span class="badge lang">Subtitulada</span></td>
-                                    <td>02:30 PM</td>
-                                    <td>$ 26,000.00</td>
-                                    <td><button class="btn-table-action"><i class="fa-solid fa-cart-shopping"></i> Ver Sillas</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+            <main id="dynamic-content" class="main-workspace">
 
             </main>
+
         </div>
+
     </div>
 
 </body>
+
 </html>

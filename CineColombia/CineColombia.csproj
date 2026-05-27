@@ -124,8 +124,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="imagenes\logo-cinecolombia.png" />
+    <Content Include="paginas\cartelera.html" />
     <Content Include="paginas\dashboard.html" />
     <Content Include="paginas\index.html" />
+    <Content Include="paginas\inicio.html" />
     <Content Include="Scrips_From\dashboard.js" />
     <Content Include="Scrips_From\login.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
