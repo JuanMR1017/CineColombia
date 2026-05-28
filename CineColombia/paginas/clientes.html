@@ -1,0 +1,114 @@
+<section class="data-section">
+
+    <div class="section-header">
+
+        <h3>
+            <i class="fa-solid fa-users"></i>
+            Gestión de Clientes
+        </h3>
+
+        <p>
+            Registro y administración de los clientes del sistema
+        </p>
+
+    </div>
+
+    <!-- FORMULARIO DE CLIENTE -->
+    <div class="cliente-grid">
+
+        <div class="form-group">
+            <label>Tipo de Documento</label>
+            <select id="cmbTipoDoc" class="input-control">
+                <option value="1">Cédula de Ciudadanía</option>
+                <option value="2">Tarjeta de Identidad</option>
+                <option value="3">Cédula de Extranjería</option>
+                <option value="4">Pasaporte</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Número de Documento</label>
+            <input type="text" id="txtNumDocumento" class="input-control" placeholder="Ej: 1017001001">
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de Cliente</label>
+            <select id="cmbTipoCliente" class="input-control">
+                <option value="1">Regular</option>
+                <option value="2">Fidelizado (Cineco)</option>
+                <option value="3">Gold</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Nombres</label>
+            <input type="text" id="txtNombres" class="input-control" placeholder="Nombres del cliente">
+        </div>
+
+        <div class="form-group">
+            <label>Apellidos</label>
+            <input type="text" id="txtApellidos" class="input-control" placeholder="Apellidos del cliente">
+        </div>
+
+        <div class="form-group">
+            <label>Correo Electrónico (Email)</label>
+            <input type="email" id="txtEmail" class="input-control" placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="form-group" style="justify-content: center; padding-top: 15px;">
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <input type="checkbox" id="chkActivo" checked style="width: 18px; height: 18px;">
+                Cliente Activo en el Sistema
+            </label>
+        </div>
+
+        <div class="form-group" style="grid-column: 1 / -1; display: flex; flex-direction: row; gap: 15px; justify-content: flex-end;">
+            <button id="btnLimpiarCliente" class="btn-confirm-sale" style="width: auto; background-color: #6c757d; padding: 10px 20px;">
+                <i class="fa-solid fa-eraser"></i> Limpiar
+            </button>
+            <button id="btnGuardarCliente" class="btn-confirm-sale" style="width: auto; padding: 10px 20px;">
+                <i class="fa-solid fa-floppy-disk"></i> Guardar Cliente
+            </button>
+        </div>
+
+    </div>
+
+    <!-- TABLA DE CLIENTES -->
+    <div class="table-container">
+        <table class="table-clientes">
+            <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Cliente</th>
+                    <th>Tipo</th>
+                    <th>Email</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CC 1017001001</td>
+                    <td>Juan Pérez</td>
+                    <td><span class="badge badge-fidelizado">Fidelizado</span></td>
+                    <td>juan.perez@email.com</td>
+                    <td class="status-active">Activo</td>
+                    <td>
+                        <button style="border:none; background:none; color:#007bff; cursor:pointer;" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CC 1152002002</td>
+                    <td>María Gómez</td>
+                    <td><span class="badge badge-normal">Regular</span></td>
+                    <td>maria.gomez@email.com</td>
+                    <td class="status-active">Activo</td>
+                    <td>
+                        <button style="border:none; background:none; color:#007bff; cursor:pointer;" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>

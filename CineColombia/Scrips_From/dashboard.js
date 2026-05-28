@@ -50,6 +50,16 @@ function cargarVista(vista) {
         })
         .then(html => {
             $("#dynamic-content").html(html);
+            // Cuando se carga una vista dinámica, es posible que necesitemos despachar
+            // un evento o ejecutar scripts específicos que esperan que el DOM esté listo.
+            if(vista === 'ventas') {
+                if(typeof initVentas === 'function') {
+                    initVentas();
+                } else {
+                    // Cargar el script de ventas dinámicamente si no se ha cargado antes
+                    $.getScript("../Scrips_From/ventas.js");
+                }
+            }
         })
         .catch(error => {
             console.error("Hubo un problema al cargar la vista:", error);
