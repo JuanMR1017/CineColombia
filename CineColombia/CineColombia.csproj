@@ -120,6 +120,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\dashboard.css" />
     <Content Include="css\estilos.css" />
+    <Content Include="css\ventas.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -128,8 +129,10 @@
     <Content Include="paginas\dashboard.html" />
     <Content Include="paginas\index.html" />
     <Content Include="paginas\inicio.html" />
+    <Content Include="paginas\ventas.html" />
     <Content Include="Scrips_From\dashboard.js" />
     <Content Include="Scrips_From\login.js" />
+    <Content Include="Scrips_From\ventas.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
