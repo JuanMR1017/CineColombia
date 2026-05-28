@@ -126,6 +126,7 @@
     <Content Include="imagenes\logo-cinecolombia.png" />
     <Content Include="paginas\cartelera.html" />
     <Content Include="paginas\dashboard.html" />
+    <Content Include="paginas\frmLogin.html" />
     <Content Include="paginas\index.html" />
     <Content Include="paginas\inicio.html" />
     <Content Include="Scrips_From\dashboard.js" />
@@ -186,6 +187,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Splash.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -228,12 +230,21 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Splash.aspx.cs">
+      <DependentUpon>Splash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Splash.aspx.designer.cs">
+      <DependentUpon>Splash.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
